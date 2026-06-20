@@ -17,7 +17,7 @@ const submit = () => form.put('/custom-instructions', { preserveScroll: true })
 <template>
     <div class="mx-auto max-w-2xl space-y-6 p-6 text-gray-900 dark:text-gray-100">
         <div>
-            <Link href="/chat" class="text-sm text-indigo-600 hover:underline">← Retour au chat</Link>
+            <Link href="/chat" class="text-sm text-red-600 hover:underline">← Retour au chat</Link>
             <h1 class="mt-2 text-2xl font-bold">Instructions personnalisées</h1>
             <p class="text-sm text-gray-500">Dis à GameSage qui tu es et comment tu veux qu'il te réponde.</p>
         </div>
@@ -44,7 +44,7 @@ const submit = () => form.put('/custom-instructions', { preserveScroll: true })
 
             <div class="flex items-center gap-3">
                 <button :disabled="form.processing" @click="submit"
-                    class="rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 disabled:opacity-50">
+                    class="rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700 disabled:opacity-50">
                     {{ form.processing ? 'Enregistrement…' : 'Enregistrer' }}
                 </button>
                 <span v-if="form.recentlySuccessful" class="text-sm text-green-600">Enregistré ✓</span>

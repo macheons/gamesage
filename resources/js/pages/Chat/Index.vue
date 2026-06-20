@@ -77,7 +77,7 @@ const submit = () => {
         <aside class="flex w-64 shrink-0 flex-col border-r border-gray-200 dark:border-gray-800">
             <div class="p-3">
                 <Link href="/chat"
-                    class="block w-full rounded-lg bg-indigo-600 py-2 text-center text-sm text-white hover:bg-indigo-700">
+                    class="block w-full rounded-lg bg-red-600 py-2 text-center text-sm text-white hover:bg-red-700">
                     + Nouveau chat
                 </Link>
             </div>
@@ -107,7 +107,7 @@ const submit = () => {
                     <div v-for="m in props.current.messages" :key="m.id"
                         :class="m.role === 'user' ? 'flex justify-end' : 'flex justify-start'">
                         <div v-if="m.role === 'user'"
-                            class="max-w-[80%] whitespace-pre-wrap rounded-2xl bg-indigo-600 px-4 py-2 text-white">
+                            class="max-w-[80%] whitespace-pre-wrap rounded-2xl bg-red-600 px-4 py-2 text-white">
                             {{ m.content }}
                         </div>
                         <div v-else class="prose max-w-none dark:prose-invert" v-html="md.render(m.content)" />
@@ -130,7 +130,7 @@ const submit = () => {
                         class="flex-1 resize-none rounded-lg border-gray-300 p-3 dark:border-gray-700 dark:bg-gray-800"
                         @keydown.enter.exact.prevent="submit" />
                     <button :disabled="streaming || !form.message.trim()"
-                        class="rounded-lg bg-indigo-600 px-4 text-white hover:bg-indigo-700 disabled:opacity-50"
+                        class="rounded-lg bg-red-600 px-4 text-white hover:bg-red-700 disabled:opacity-50"
                         @click="submit">
                         ↑
                     </button>
